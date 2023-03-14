@@ -1,0 +1,141 @@
+<div class="body">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row fxfLayout="row">
+            <h2>{{dialogData.action}} Classement</h2>
+            <span class="spacer"></span>
+            <button class="mat-dialog-close" mat-icon-button mat-dialog-close>
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    
+    <mat-dialog-content class="mat-typography">
+        <form [formGroup]="classementForm">
+            
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>League</mat-label>
+                        <input matInput formControlName="league" required>
+                        <mat-error *ngIf="classementForm.controls.league.touched && classementForm.controls.league.invalid">
+                            <span *ngIf="classementForm.controls.league.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="classementForm.controls.league.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Saison</mat-label>
+                        <input matInput formControlName="saison" required>
+                        <mat-error *ngIf="classementForm.controls.saison.touched && classementForm.controls.saison.invalid">
+                            <span *ngIf="classementForm.controls.saison.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="classementForm.controls.saison.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Position</mat-label>
+                        <input matInput formControlName="pos" required>
+                        <mat-error *ngIf="classementForm.controls.pos.touched && classementForm.controls.pos.invalid">
+                            <span *ngIf="classementForm.controls.pos.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="classementForm.controls.pos.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Matchs_joués</mat-label>
+                        <input matInput formControlName="mj" required>
+                        <mat-error *ngIf="classementForm.controls.mj.touched && classementForm.controls.mj.invalid">
+                            <span *ngIf="classementForm.controls.mj.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="classementForm.controls.mj.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Matchs_gagnés</mat-label>
+                        <input matInput formControlName="mg" required>
+                        <mat-error *ngIf="classementForm.controls.mg.touched && classementForm.controls.mg.invalid">
+                            <span *ngIf="classementForm.controls.mg.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="classementForm.controls.mg.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Matchs_nuls</mat-label>
+                        <input matInput formControlName="mn" required>
+                        <mat-error *ngIf="classementForm.controls.mn.touched && classementForm.controls.mn.invalid">
+                            <span *ngIf="classementForm.controls.mn.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="classementForm.controls.mn.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Matchs_perdus</mat-label>
+                        <input matInput formControlName="mp" required>
+                        <mat-error *ngIf="classementForm.controls.mp.touched && classementForm.controls.mp.invalid">
+                            <span *ngIf="classementForm.controls.mp.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="classementForm.controls.mp.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                
+                       
+                        <div fxFlex fxLayout="column">
+                            <mat-form-field fxFlex>
+                                <mat-label>Buts_pour</mat-label>
+                                <input matInput formControlName="bp" required>
+                                <mat-error *ngIf="classementForm.controls.bp.touched && classementForm.controls.bp.invalid">
+                                    <span *ngIf="classementForm.controls.bp.errors.required">Ce champ est obligatoire.</span>
+                                    <span *ngIf="classementForm.controls.bp.errors.pattern">Ce champ est invalide.</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div> 
+                        <div fxFlex fxLayout="column">
+                            <mat-form-field fxFlex>
+                                <mat-label>Buts_contre</mat-label>
+                                <input matInput formControlName="bc" required>
+                                <mat-error *ngIf="classementForm.controls.bc.touched && classementForm.controls.bc.invalid">
+                                    <span *ngIf="classementForm.controls.bc.errors.required">Ce champ est obligatoire.</span>
+                                    <span *ngIf="classementForm.controls.bc.errors.pattern">Ce champ est invalide.</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex fxLayout="column">
+                            <mat-form-field fxFlex>
+                                <mat-label>Difference_buts</mat-label>
+                                <input matInput formControlName="db" required>
+                                <mat-error *ngIf="classementForm.controls.db.touched && classementForm.controls.db.invalid">
+                                    <span *ngIf="classementForm.controls.db.errors.required">Ce champ est obligatoire.</span>
+                                    <span *ngIf="classementForm.controls.db.errors.pattern">Ce champ est invalide.</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        
+                        <div fxFlex fxLayout="column">
+                            <mat-form-field fxFlex>
+                                <mat-label>Points</mat-label>
+                                <input matInput formControlName="pts" required>
+                                <mat-error *ngIf="classementForm.controls.pts.touched && classementForm.controls.pts.invalid">
+                                    <span *ngIf="classementForm.controls.pts.errors.required">Ce champ est obligatoire.</span>
+                                    <span *ngIf="classementForm.controls.pts.errors.pattern">Ce champ est invalide.</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        
+
+        </form>
+    </mat-dialog-content>
+    
+    <mat-dialog-actions align="end">
+        <button mat-raised-button class="done" type="submit" (click)="handleSubmit()" [disabled]="!(classementForm.valid )">
+            <mat-icon>save</mat-icon> {{action}}
+        </button>
+        <button mat-raised-button class="close" mat-dialog-close>
+            <mat-icon>cancel</mat-icon> Close
+        </button>
+    </mat-dialog-actions>
+    </div>

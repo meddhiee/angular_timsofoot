@@ -1,0 +1,100 @@
+<div class="body">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row fxfLayout="row">
+            <h2>{{dialogData.action}} Calendrier</h2>
+            <span class="spacer"></span>
+            <button class="mat-dialog-close" mat-icon-button mat-dialog-close>
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    
+    <mat-dialog-content class="mat-typography">
+        <form [formGroup]="calendrierForm">
+            
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Equipe Timsoft</mat-label>
+                        <input matInput formControlName="eq_timsoft" required>
+                        <mat-error *ngIf="calendrierForm.controls.eq_timsoft.touched && calendrierForm.controls.eq_timsoft.invalid">
+                            <span *ngIf="calendrierForm.controls.eq_timsoft.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="calendrierForm.controls.eq_timsoft.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Equipe Adversaire</mat-label>
+                        <input matInput formControlName="eq_adv" required>
+                        <mat-error *ngIf="calendrierForm.controls.eq_adv.touched && calendrierForm.controls.eq_adv.invalid">
+                            <span *ngIf="calendrierForm.controls.eq_adv.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="calendrierForm.controls.eq_adv.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Jour</mat-label>
+                        <input matInput formControlName=" jour" required>
+                        <mat-error *ngIf="calendrierForm.controls. jour.touched && calendrierForm.controls. jour.invalid">
+                            <span *ngIf="calendrierForm.controls. jour.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="calendrierForm.controls. jour.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+    
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Mois</mat-label>
+                        <input matInput formControlName="mois" required>
+                        <mat-error *ngIf="calendrierForm.controls.mois.touched && calendrierForm.controls.mois.invalid">
+                            <span *ngIf="calendrierForm.controls.mois.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="calendrierForm.controls.mois.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Année</mat-label>
+                        <input matInput formControlName="annee" required>
+                        <mat-error *ngIf="calendrierForm.controls.annee.touched && calendrierForm.controls.annee.invalid">
+                            <span *ngIf="calendrierForm.controls.annee.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="calendrierForm.controls.annee.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>League</mat-label>
+                        <input matInput formControlName="league" required>
+                        <mat-error *ngIf="calendrierForm.controls.league.touched && calendrierForm.controls.league.invalid">
+                            <span *ngIf="calendrierForm.controls.league.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="calendrierForm.controls.league.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Temps</mat-label>
+                        <input matInput formControlName="temps" required>
+                        <mat-error *ngIf="calendrierForm.controls.temps.touched && calendrierForm.controls.temps.invalid">
+                            <span *ngIf="calendrierForm.controls.temps.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="calendrierForm.controls.temps.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            
+        </form>
+    </mat-dialog-content>
+    
+    <mat-dialog-actions align="end">
+        <button mat-raised-button class="done" type="submit" (click)="handleSubmit()" [disabled]="!(calendrierForm.valid )">
+            <mat-icon>save</mat-icon> {{action}}
+        </button>
+        <button mat-raised-button class="close" mat-dialog-close>
+            <mat-icon>cancel</mat-icon> Close
+        </button>
+    </mat-dialog-actions>
+    </div>

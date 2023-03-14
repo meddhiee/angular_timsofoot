@@ -1,0 +1,46 @@
+
+mat-card{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 20px #474e5d;
+    
+  }
+ .title{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 20px #474e5d;
+    background-color: #00C0A1;
+    color: aliceblue;
+  }
+
+  table {
+    width: 100%;
+}
+
+::ng-deep .highlight {
+    color: white;
+    background: #671AB7;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    
+    
+  }
+.ajout{
+    color: #00C0A1;
+    position: absolute;
+    transform: translateY(-20px) translateX(-30px);
+
+}
+.button-container {
+  display: flex; /* utilisation de display flex pour un alignement horizontal */
+  justify-content: center; /* pour aligner les boutons dans le centre */
+  align-items: center; /* pour centrer les boutons verticalement*/
+}
+
+.button {
+  display: inline-block; /* pour mettre les boutons sur la même ligne */
+  margin: 0 1px; /* pour ajouter une marge entre les boutons */
+}

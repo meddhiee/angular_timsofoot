@@ -1,0 +1,55 @@
+<body>
+    
+
+    <mat-card class="title">
+        <b><span>Gerer Utilistaeurs</span></b>
+       
+    </mat-card>
+    <hr>
+    <mat-card>
+        <mat-form-field>
+            <mat-label>Filtrer</mat-label>
+            <input matInput (keyup)="applyFilter($event)" #input>
+        </mat-form-field>
+    </mat-card>
+    <hr>
+
+<div class="responsive_table">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Nom & Prénom</th>
+            <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef>Email</th>
+            <td mat-cell *matCellDef="let element">{{element.email}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="contactNumber">
+            <th mat-header-cell *matHeaderCellDef>Tel</th>
+            <td mat-cell *matCellDef="let element">{{element.contactNumber}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="role">
+            <th mat-header-cell *matHeaderCellDef>Role</th>
+            <td mat-cell *matCellDef="let element">{{element.role}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let element" >
+                <mat-slide-toggle  (change)="onChange($event.checked , element.id)" matTooltip="Approuver ou refuser utilisateur" [checked]="element.status"></mat-slide-toggle>
+            
+            <button  mat-icon-button style="color:#00C0A1;" matTooltip="Supprimer" (click)="handleDeleteAction(element)">
+                <mat-icon>delete</mat-icon>
+            </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
+        <tr mat-row *matRowDef="let row;columns:displayedColumns;"></tr>
+
+    </table>
+</div>
+</body>

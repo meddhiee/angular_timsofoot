@@ -1,0 +1,94 @@
+<div class="body">
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxfLayout="row">
+        <h2 >{{dialogData.action}} Joueur</h2>
+        <span class="spacer"></span>
+        <button class="mat-dialog-close" mat-icon-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="joueurForm">
+        <div fxFlex fxLayout="column">
+            <mat-form-field  fxFlex>
+                <mat-label>Nom joueur</mat-label>
+                <input matInput formControlName="name" required>
+                <mat-error *ngIf="joueurForm.controls.name.touched && joueurForm.controls.name.invalid">
+                    <span *ngIf="joueurForm.controls.name.errors.required">Ce champ est obligatoire.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex fxLayout="column">
+            <mat-form-field fxFlex>
+                <mat-label>Saison</mat-label>
+                <input matInput formControlName="season" required>
+                <mat-error *ngIf="joueurForm.controls.season.touched && joueurForm.controls.season.invalid">
+                    <span *ngIf="joueurForm.controls.season.errors.required">Ce champ est obligatoire.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex fxLayout="column">
+            <mat-form-field fxFlex>
+                <mat-label>Participations</mat-label>
+                <input matInput formControlName="participations" required>
+                <mat-error *ngIf="joueurForm.controls.participations.touched && joueurForm.controls.participations.invalid">
+                    <span *ngIf="joueurForm.controls.participations.errors.required">Ce champ est obligatoire.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex fxLayout="column">
+            <mat-form-field fxFlex>
+                <mat-label>Buts</mat-label>
+                <input matInput formControlName="buts" required>
+                <mat-error *ngIf="joueurForm.controls.buts.touched && joueurForm.controls.buts.invalid">
+                    <span *ngIf="joueurForm.controls.buts.errors.required">Ce champ est obligatoire.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex fxLayout="column">
+            <mat-form-field fxFlex>
+                <mat-label>Assists</mat-label>
+                <input matInput formControlName="assists" required>
+                <mat-error *ngIf="joueurForm.controls.assists.touched && joueurForm.controls.assists.invalid">
+                    <span *ngIf="joueurForm.controls.assists.errors.required">Ce champ est obligatoire.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex fxLayout="column">
+            <mat-form-field fxFlex>
+                <mat-label>Cartons jaunes</mat-label>
+                <input matInput formControlName="car_jaune" required>
+                <mat-error *ngIf="joueurForm.controls.car_jaune.touched && joueurForm.controls.car_jaune.invalid">
+                    <span *ngIf="joueurForm.controls.car_jaune.errors.required">Ce champ est obligatoire.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex fxLayout="column">
+            <mat-form-field fxFlex>
+                <mat-label>Cartons rouges</mat-label>
+                <input matInput formControlName="car_rouge" required>
+                <mat-error *ngIf="joueurForm.controls.car_rouge.touched && joueurForm.controls.car_rouge.invalid">
+                    <span *ngIf="joueurForm.controls.car_rouge.errors.required">Ce champ est obligatoire.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-raised-button class="done" type="submit" (click)="handleSubmit()" [disabled]="!(joueurForm.valid && joueurForm.dirty)">
+        <mat-icon>save</mat-icon> {{action}}
+    </button>
+    <button mat-raised-button  class="close" mat-dialog-close>
+        <mat-icon>cancel</mat-icon> Annuler
+    </button>
+</mat-dialog-actions>
+</div>

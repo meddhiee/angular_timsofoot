@@ -1,0 +1,58 @@
+<div class="body">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row fxfLayout="row">
+            <h2>{{dialogData.action}} Gelerie</h2>
+            <span class="spacer"></span>
+            <button class="mat-dialog-close" mat-icon-button mat-dialog-close>
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    
+    <mat-dialog-content class="mat-typography">
+        <form [formGroup]="nouveauteForm">
+            
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Photo</mat-label>
+                        <input matInput formControlName="photo" required>
+                        <mat-error *ngIf="nouveauteForm.controls.photo.touched && nouveauteForm.controls.photo.invalid">
+                            <span *ngIf="nouveauteForm.controls.photo.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="nouveauteForm.controls.photo.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Description</mat-label>
+                        <input matInput formControlName="description" required>
+                        <mat-error *ngIf="nouveauteForm.controls.description.touched && nouveauteForm.controls.description.invalid">
+                            <span *ngIf="nouveauteForm.controls.description.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="nouveauteForm.controls.description.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayout="column">
+                    <mat-form-field fxFlex>
+                        <mat-label>Date</mat-label>
+                        <input matInput formControlName="date" required>
+                        <mat-error *ngIf="nouveauteForm.controls.date.touched && nouveauteForm.controls.date.invalid">
+                            <span *ngIf="nouveauteForm.controls.date.errors.required">Ce champ est obligatoire.</span>
+                            <span *ngIf="nouveauteForm.controls.date.errors.pattern">Ce champ est invalide.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+    
+            
+        </form>
+    </mat-dialog-content>
+    
+    <mat-dialog-actions align="end">
+        <button mat-raised-button class="done" type="submit" (click)="handleSubmit()" [disabled]="!(nouveauteForm.valid )">
+            <mat-icon>save</mat-icon> {{action}}
+        </button>
+        <button mat-raised-button class="close" mat-dialog-close>
+            <mat-icon>cancel</mat-icon> Close
+        </button>
+    </mat-dialog-actions>
+    </div>

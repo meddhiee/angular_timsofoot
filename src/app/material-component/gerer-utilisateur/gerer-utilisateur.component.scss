@@ -1,0 +1,30 @@
+mat-card{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 20px #474e5d;
+    
+  }
+ .title{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 20px #474e5d;
+    background-color: #00C0A1;
+    color: aliceblue;
+  }
+
+table {
+    width: 100%;
+}
+
+::ng-deep .highlight {
+    color: white;
+    background: #671AB7;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    
+    
+  }
+  

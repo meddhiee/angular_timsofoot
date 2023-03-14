@@ -1,0 +1,41 @@
+.body{
+    background-color: #f0f3f3;
+    height: 90vh;
+    
+}
+a{
+    
+    color: #002051;
+    text-decoration: none;
+   margin: 20px;
+}
+
+div{
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    
+    text-align: center;
+    background-color: #f0f3f3;
+    
+}
+.items:hover:hover{
+    background-color: #00C0A1;
+    width: 120%;
+}
+mat-icon{
+    font-size:20px ;
+    vertical-align: bottom;
+  
+}
+.titre{
+    font-size: 25px;
+    font-family: fantasy;
+    letter-spacing: 5px;
+    text-align: center;
+    background-color: #002051;
+    color: #f0f3f3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

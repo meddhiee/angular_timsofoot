@@ -1,0 +1,36 @@
+.body{
+    height: 300px;
+    overflow: hidden;
+    
+}
+h2{
+    position: relative;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    
+    margin-top: 20px;
+}
+
+
+.mat-toolbar {
+    margin: -10px;
+    width: auto;
+    margin-bottom: 10px;
+    padding-left:20px ;
+    background-color: #002051;
+
+}
+
+mat-form-field {
+    padding: 5px;
+}
+
+mat-hint {
+    color: red;
+}
+.done{
+    background-color:#03AB99;
+}
+.close{
+    background-color:#E3EDF5 ;
+}

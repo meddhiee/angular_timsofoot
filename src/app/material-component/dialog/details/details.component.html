@@ -1,0 +1,159 @@
+<div class="body">
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxfLayout="row">
+        <h2>{{dialogData.action}} Details</h2>
+        <span class="spacer"></span>
+        <button class="mat-dialog-close" mat-icon-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="detailsForm">
+        
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Equipe Timsoft</mat-label>
+                    <input matInput formControlName="eq_timsoft" required>
+                    <mat-error *ngIf="detailsForm.controls.eq_timsoft.touched && detailsForm.controls.eq_timsoft.invalid">
+                        <span *ngIf="detailsForm.controls.eq_timsoft.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.eq_timsoft.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Equipe Adversaire</mat-label>
+                    <input matInput formControlName="eq_adversaire" required>
+                    <mat-error *ngIf="detailsForm.controls.eq_adversaire.touched && detailsForm.controls.eq_adversaire.invalid">
+                        <span *ngIf="detailsForm.controls.eq_adversaire.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.eq_adversaire.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Score Timsoft</mat-label>
+                    <input matInput formControlName="score_timsoft" required>
+                    <mat-error *ngIf="detailsForm.controls.score_timsoft.touched && detailsForm.controls.score_timsoft.invalid">
+                        <span *ngIf="detailsForm.controls.score_timsoft.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.score_timsoft.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Score Adversaire</mat-label>
+                    <input matInput formControlName="score_adversaire" required>
+                    <mat-error *ngIf="detailsForm.controls.score_adversaire.touched && detailsForm.controls.score_adversaire.invalid">
+                        <span *ngIf="detailsForm.controls.score_adversaire.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.score_adversaire.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Date</mat-label>
+                    <input matInput formControlName="date" required>
+                    <mat-error *ngIf="detailsForm.controls.date.touched && detailsForm.controls.date.invalid">
+                        <span *ngIf="detailsForm.controls.date.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.date.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Temps</mat-label>
+                    <input matInput formControlName="time" required>
+                    <mat-error *ngIf="detailsForm.controls.time.touched && detailsForm.controls.time.invalid">
+                        <span *ngIf="detailsForm.controls.time.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.time.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>League</mat-label>
+                    <input matInput formControlName="league" required>
+                    <mat-error *ngIf="detailsForm.controls.league.touched && detailsForm.controls.league.invalid">
+                        <span *ngIf="detailsForm.controls.league.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.league.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Saison</mat-label>
+                    <input matInput formControlName="season" required>
+                    <mat-error *ngIf="detailsForm.controls.season.touched && detailsForm.controls.season.invalid">
+                        <span *ngIf="detailsForm.controls.season.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.season.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Logo</mat-label>
+                    <input matInput formControlName="logo" required>
+                    <mat-error *ngIf="detailsForm.controls.logo.touched && detailsForm.controls.logo.invalid">
+                        <span *ngIf="detailsForm.controls.logo.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.logo.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+           
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Cartes Jaunes Timsoft</mat-label>
+                    <input matInput formControlName="cj_timsoft" required>
+                    <mat-error *ngIf="detailsForm.controls.cj_timsoft.touched && detailsForm.controls.cj_timsoft.invalid">
+                        <span *ngIf="detailsForm.controls.cj_timsoft.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.cj_timsoft.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Cartes Jaunes Adv</mat-label>
+                    <input matInput formControlName="cj_adv" required>
+                    <mat-error *ngIf="detailsForm.controls.cj_adv.touched && detailsForm.controls.cj_adv.invalid">
+                        <span *ngIf="detailsForm.controls.cj_adv.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.cj_adv.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Cartes Rouges Timsoft</mat-label>
+                    <input matInput formControlName="cr_timsoft" required>
+                    <mat-error *ngIf="detailsForm.controls.cr_timsoft.touched && detailsForm.controls.cr_timsoft.invalid">
+                        <span *ngIf="detailsForm.controls.cr_timsoft.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.cr_timsoft.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex fxLayout="column">
+                <mat-form-field fxFlex>
+                    <mat-label>Cartes Rouges Adv</mat-label>
+                    <input matInput formControlName="cr_adv" required>
+                    <mat-error *ngIf="detailsForm.controls.cr_adv.touched && detailsForm.controls.cr_adv.invalid">
+                        <span *ngIf="detailsForm.controls.cr_adv.errors.required">Ce champ est obligatoire.</span>
+                        <span *ngIf="detailsForm.controls.cr_adv.errors.pattern">Ce champ est invalide.</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-raised-button class="done" type="submit" (click)="handleSubmit()" [disabled]="!(detailsForm.valid )">
+        <mat-icon>save</mat-icon> {{action}}
+    </button>
+    <button mat-raised-button class="close" mat-dialog-close>
+        <mat-icon>cancel</mat-icon> Close
+    </button>
+</mat-dialog-actions>
+</div>

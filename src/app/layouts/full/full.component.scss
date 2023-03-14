@@ -1,0 +1,27 @@
+.nav{
+  background-color: #002051;
+  display: flex;
+  padding: 35px;
+ }
+span img{
+    margin-left: -20px;
+  margin-top: 10px;
+    width: 50%;
+    height: auto;
+  }
+#snav{
+  overflow: hidden;
+}
+  @media screen and (max-width: 650px) {
+    span img {
+      margin-left: -20px;
+      margin-top: 10px;
+        width: 20%;
+        height: auto;
+
+    }
+  }
+.main-container{
+  overflow: hidden;
+    height: calc(100vh);
+}
